@@ -1,0 +1,35 @@
+{
+  "name": "cl-able-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress --config webpack.config.js",
+    "lint": "eslint ./src --ext .js --cache --fix --ext .jsx --cache --fix",
+    "prebuild": "rimraf lib && rimraf demo",
+    "start": "webpack-dev-server --progress --config webpack.config.js --open"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.1.1",
+    "eslint-loader": "^1.8.0",
+    "fs-extra": "^3.0.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "ableplayer": "git+https://github.com/ableplayer/ableplayer.git#develop",
+    "jquery": "^3.3.1",
+    "xml-js": "^1.6.2"
+  }
+}
